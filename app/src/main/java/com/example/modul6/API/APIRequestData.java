@@ -13,11 +13,11 @@ public interface APIRequestData {
     Call<ResponseModel> ardRetrieveData();
 
     @FormUrlEncoded
-    @POST("create.php")
+    @POST("insert.php")
     Call<ResponseModel>ardCreateData(
             @Field("nama") String nama,
-            @Field("alamat") String alamat,
-            @Field("telepon") String telepon
+            @Field("jurusan") String jurusan,
+            @Field("email") String email
     );
 
     @FormUrlEncoded

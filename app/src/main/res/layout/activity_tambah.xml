@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     android:padding="16dp"
     tools:context=".Activity.TambahActivity">
 
@@ -20,28 +21,30 @@
         />
     <EditText
         android:id="@+id/et_nama"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama Mahasiswa"
         android:textSize="20sp"
         android:inputType="text"
+        android:layout_marginBottom="60px"
 
         />
     <EditText
-        android:id="@+id/et_alamat"
-        android:layout_width="wrap_content"
+        android:id="@+id/et_jurusan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Alamat Email"
+        android:hint="jurusan"
         android:textSize="20sp"
         android:inputType="text"
+        android:layout_marginBottom="60px"
 
         />
 
     <EditText
-        android:id="@+id/et_telepon"
-        android:layout_width="wrap_content"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nomer Telepon"
+        android:hint="email"
         android:textSize="20sp"
         android:inputType="phone"
 

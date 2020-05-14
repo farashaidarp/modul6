@@ -19,9 +19,9 @@ import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
 
-    private EditText etNama, etAlamat, etTelepon;
+    private EditText etNama, etJurusan, etEmail;
     private Button btnSimpan;
-    private String nama, alamat, telepon;
+    private String nama, jurusan, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +29,24 @@ public class TambahActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tambah);
 
         etNama=findViewById(R.id.et_nama);
-        etAlamat=findViewById(R.id.et_alamat);
-        etTelepon=findViewById(R.id.et_telepon);
+        etJurusan=findViewById(R.id.et_jurusan);
+        etEmail=findViewById(R.id.et_email);
         btnSimpan=findViewById(R.id.btn_simpan);
 
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nama = etNama.getText().toString();
-                alamat = etAlamat.getText().toString();
-                telepon = etTelepon.getText().toString();
+                jurusan = etJurusan.getText().toString();
+                email = etEmail.getText().toString();
 
                 if(nama.trim().equals("")){
                     etNama.setError("Nama Harus Diisi");
 
-                }else if(alamat.trim().equals("")){
-                    etAlamat.setError("Alamat Harus Diisi");
-                }else if(telepon.trim().equals("")){
-                    etTelepon.setError("Telepon Harus Diisi");
+                }else if(jurusan.trim().equals("")){
+                    etJurusan.setError("Alamat Harus Diisi");
+                }else if(email.trim().equals("")){
+                    etEmail.setError("Telepon Harus Diisi");
                 }else{
                     createData();
                 }
@@ -56,7 +56,7 @@ public class TambahActivity extends AppCompatActivity {
 
     private void createData(){
         APIRequestData ardData = RetroServer.konekRetrofit().create(APIRequestData.class);//menghubungkan class interface ke retrofit
-        Call<ResponseModel> simpanData = ardData.ardCreateData(nama, alamat, telepon);
+        Call<ResponseModel> simpanData = ardData.ardCreateData(nama, jurusan, email);
 
         simpanData.enqueue(new Callback<ResponseModel>() {
             @Override

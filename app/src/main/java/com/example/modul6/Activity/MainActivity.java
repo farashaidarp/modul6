@@ -1,7 +1,5 @@
 package com.example.modul6.Activity;
-//model = membuat setter dan getter
-//api = konek retrofit
-//adapter = menarik data
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +7,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
+
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;

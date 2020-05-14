@@ -50,8 +50,8 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
         DataModel dm = listData.get(position);//set posisi data
         holder.tvID.setText(String.valueOf(dm.getId()));
         holder.tvNama.setText(dm.getNama());
-        holder.tvAlamat.setText(dm.getAlamat());
-        holder.tvTelepon.setText(dm.getTelepon());
+        holder.tvAlamat.setText(dm.getJurusan());
+        holder.tvTelepon.setText(dm.getEmail());
         //meletakkan/set text dari setiap textview
     }
 

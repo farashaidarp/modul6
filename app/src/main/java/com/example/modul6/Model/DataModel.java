@@ -3,7 +3,7 @@ package com.example.modul6.Model;
 public class DataModel {
     //setter getter data
     private int id;
-    private String nama, alamat, telepon;
+    private String nama, jurusan, email;
 
     public int getId() {
         return id;
@@ -21,19 +21,19 @@ public class DataModel {
         this.nama = nama;
     }
 
-    public String getAlamat() {
-        return alamat;
+    public String getJurusan() {
+        return jurusan;
     }
 
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
+    public void setJurusan(String jurusan) {
+        this.jurusan = jurusan;
     }
 
-    public String getTelepon() {
-        return telepon;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTelepon(String telepon) {
-        this.telepon = telepon;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
